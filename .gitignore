@@ -1,1 +1,8 @@
 java-test
+
+pom.xml
+.editorconfig
+*maven*/
+jacoco/
+jacoco*
+surefire*
