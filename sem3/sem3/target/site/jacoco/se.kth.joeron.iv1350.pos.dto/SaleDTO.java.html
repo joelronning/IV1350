@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SaleDTO.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">sem3</a> &gt; <a href="index.source.html" class="el_package">se.kth.joeron.iv1350.pos.dto</a> &gt; <span class="el_source">SaleDTO.java</span></div><h1>SaleDTO.java</h1><pre class="source lang-java linenums">package se.kth.joeron.iv1350.pos.dto;
+
+import java.time.LocalDateTime;
+
+public class SaleDTO {
+    private String itemList;
+    private LocalDateTime dateAndTime;
+    private double price;
+    private double vatAmount;
+    private double totalPrice;
+    private int amountToPay;
+    private int amountPaid;
+    private int changeAmount;
+    
+    /**
+     * Creates instance of &lt;code&gt;SaleDTO&lt;/code&gt; which holds information about a sale.
+     * @param itemList List of items purchased in the sale.
+     * @param dateAndTime Date and time of sale.
+     * @param price Total price of sale, excluding VAT.
+     * @param vatAmount VAT amount of sale.
+     * @param totalPrice Total price of sale, including.
+     * @param amountPaid How much the customer paid.
+     * @param changeAmount How much change the customer got/will get.
+     */
+<span class="fc" id="L25">    public SaleDTO(String itemList, LocalDateTime dateAndTime, double price, double vatAmount, double totalPrice, int amountToPay, int amountPaid, int changeAmount) {</span>
+<span class="fc" id="L26">        this.itemList = itemList;</span>
+<span class="fc" id="L27">        this.dateAndTime = dateAndTime;</span>
+<span class="fc" id="L28">        this.price = price;</span>
+<span class="fc" id="L29">        this.vatAmount = vatAmount;</span>
+<span class="fc" id="L30">        this.totalPrice = totalPrice;</span>
+<span class="fc" id="L31">        this.amountToPay = amountToPay;</span>
+<span class="fc" id="L32">        this.amountPaid = amountPaid;</span>
+<span class="fc" id="L33">        this.changeAmount = changeAmount;</span>
+<span class="fc" id="L34">    }</span>
+
+    /**
+     * Returns the list of items purchased.
+     * @return &lt;code&gt;String&lt;/code&gt; of items.
+     */
+    public String getItemList() {
+<span class="fc" id="L41">        return this.itemList;</span>
+    }
+
+    /**
+     * Returns date and time of sale.
+     * @return Time and date of sale, &lt;code&gt;java.util.Date&lt;/code&gt;
+     */
+    public LocalDateTime getDateAndTime() {
+<span class="fc" id="L49">        return this.dateAndTime;</span>
+    }
+
+    /**
+     * Returns the price (excluding VAT) of the sale.
+     * @return Price of sale excluding VAT.
+     */
+    public double getPrice() {
+<span class="fc" id="L57">        return this.price;</span>
+    }
+
+    /**
+     * Returns VAT amount of sale.
+     * @return Total VAT amount of sale.
+     */
+    public double getVatAmount() {
+<span class="fc" id="L65">        return this.vatAmount;</span>
+    }
+
+    /**
+     * Returns the total price of the sale, including VAT.
+     * @return Price of sale including VAT.
+     */
+    public double getTotalPrice() {
+<span class="fc" id="L73">        return this.totalPrice;</span>
+    }
+
+    /**
+     * Returns what amount the customer needs to pay (&lt;code&gt;totalPrice&lt;/code&gt; rounded).
+     * @return Amount to pay.
+     */
+    public int getAmountToPay() {
+<span class="fc" id="L81">        return this.amountToPay;</span>
+    }
+
+    /**
+     * Returns the amount paid by the customer for the purchase.
+     * @return Amount paid by customer.
+     */
+    public int getAmountPaid() {
+<span class="fc" id="L89">        return this.amountPaid;</span>
+    }
+
+    /**
+     * Returns change amount from sale.
+     * @return Change paid back to customer.
+     */
+    public int getChangeAmount() {
+<span class="fc" id="L97">        return this.changeAmount;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

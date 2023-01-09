@@ -1,0 +1,17 @@
+/home/joel/Development/TIDAB/IV1350/sem3/sem3/src/main/java/se/kth/joeron/iv1350/pos/integration/DiscountDatabase.java
+/home/joel/Development/TIDAB/IV1350/sem3/sem3/src/main/java/se/kth/joeron/iv1350/pos/integration/SaleLog.java
+/home/joel/Development/TIDAB/IV1350/sem3/sem3/src/main/java/se/kth/joeron/iv1350/pos/integration/DBController.java
+/home/joel/Development/TIDAB/IV1350/sem3/sem3/src/main/java/se/kth/joeron/iv1350/pos/integration/AccountingSystem.java
+/home/joel/Development/TIDAB/IV1350/sem3/sem3/src/main/java/se/kth/joeron/iv1350/pos/view/View.java
+/home/joel/Development/TIDAB/IV1350/sem3/sem3/src/main/java/se/kth/joeron/iv1350/pos/integration/IOController.java
+/home/joel/Development/TIDAB/IV1350/sem3/sem3/src/main/java/se/kth/joeron/iv1350/pos/dto/SaleDTO.java
+/home/joel/Development/TIDAB/IV1350/sem3/sem3/src/main/java/se/kth/joeron/iv1350/pos/dto/DiscountRulesDTO.java
+/home/joel/Development/TIDAB/IV1350/sem3/sem3/src/main/java/se/kth/joeron/iv1350/pos/integration/Printer.java
+/home/joel/Development/TIDAB/IV1350/sem3/sem3/src/main/java/se/kth/joeron/iv1350/pos/model/Item.java
+/home/joel/Development/TIDAB/IV1350/sem3/sem3/src/main/java/se/kth/joeron/iv1350/pos/model/Sale.java
+/home/joel/Development/TIDAB/IV1350/sem3/sem3/src/main/java/se/kth/joeron/iv1350/pos/model/CashRegister.java
+/home/joel/Development/TIDAB/IV1350/sem3/sem3/src/main/java/se/kth/joeron/iv1350/pos/controller/Controller.java
+/home/joel/Development/TIDAB/IV1350/sem3/sem3/src/main/java/se/kth/joeron/iv1350/pos/startup/Main.java
+/home/joel/Development/TIDAB/IV1350/sem3/sem3/src/main/java/se/kth/joeron/iv1350/pos/integration/InventorySystem.java
+/home/joel/Development/TIDAB/IV1350/sem3/sem3/src/main/java/se/kth/joeron/iv1350/pos/model/Receipt.java
+/home/joel/Development/TIDAB/IV1350/sem3/sem3/src/main/java/se/kth/joeron/iv1350/pos/dto/ItemDTO.java
