@@ -17,6 +17,10 @@ public final class Main {
         Controller controller = new Controller(externalSystems, ioController);
         View view = new View(controller);
 
+        testRun(view);
+    }
+
+    private static void testRun(View view) {
         view.startNewSaleDummy();
         view.registerItemDummy(3);
         view.registerItemDummy(1);
