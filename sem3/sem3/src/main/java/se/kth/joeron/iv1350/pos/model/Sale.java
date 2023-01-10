@@ -38,8 +38,8 @@ public class Sale {
 
         this.calculatePrice();
         return new SaleDTO(itemListToString(), this.dateAndTime,
-                           this.price, this.vatAmount,
-                           this.totalPrice, this.calculateAmountToPay(),
+                           this.vatAmount, this.totalPrice,
+                           this.calculateAmountToPay(),
                            this.amountPaid, this.change);
     }
 
@@ -57,8 +57,8 @@ public class Sale {
      */
     public SaleDTO endSale() {
         return new SaleDTO(itemListToString(), this.dateAndTime,
-                           this.price, this.vatAmount,
-                           this.totalPrice, this.calculateAmountToPay(),
+                           this.vatAmount, this.totalPrice,
+                           this.calculateAmountToPay(),
                            this.amountPaid, this.change);
     }
 
@@ -72,8 +72,8 @@ public class Sale {
         this.change = this.amountPaid - this.calculateAmountToPay();
         this.dateAndTime = java.time.LocalDateTime.now();
         return new SaleDTO(itemListToString(), this.dateAndTime,
-                           this.price, this.vatAmount,
-                           this.totalPrice, this.calculateAmountToPay(),
+                           this.vatAmount, this.totalPrice,
+                           this.calculateAmountToPay(),
                            this.amountPaid, this.change);
     }
 
@@ -114,7 +114,7 @@ public class Sale {
 
             sb.append(String.format("%-21s", item.getName()));
             sb.append(String.format("%4s", item.getQuantity()));
-            sb.append(String.format("%12.2f", item.getPrice()));
+            sb.append(String.format("%12.2f", item.getPrice() + item.getVATAmount()));
         }
 
         return sb.toString();

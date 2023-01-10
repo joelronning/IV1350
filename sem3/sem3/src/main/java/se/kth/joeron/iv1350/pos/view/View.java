@@ -36,7 +36,7 @@ public class View {
         System.out.println("Item added");
         System.out.println("Item list:");
         System.out.println(saleInformation.getItemList().toString());
-        System.out.printf("Total: %.2f%n", (saleInformation.getPrice()));
+        System.out.printf("Total: %.2f%n", (saleInformation.getTotalPrice()));
         System.out.println();
     }
 
@@ -47,9 +47,8 @@ public class View {
         SaleDTO saleInformation = controller.endSale();
         System.out.println("Ending sale with the following items:");
         System.out.println(saleInformation.getItemList());
-        System.out.printf("Price: %.2f%n", saleInformation.getPrice());
-        System.out.printf("VAT: %.2f%n", saleInformation.getVatAmount());
         System.out.printf("Total: %.2f%n", saleInformation.getTotalPrice());
+        System.out.printf("VAT: %.2f%n", saleInformation.getVatAmount());
         System.out.printf("Amount to pay: %d%n", saleInformation.getAmountToPay());
         System.out.println();
     }

@@ -3,54 +3,53 @@ New sale started!
 
 Item added
 Item list:
-Cucumber                1        8.80
-Total: 8.80
+Cucumber                1        9.33
+Total: 9.33
 
 Item added
 Item list:
-Cucumber                1        8.80
-Banana                  1        2.50
-Total: 11.30
+Cucumber                1        9.33
+Banana                  1        2.65
+Total: 11.98
 
 Item added
 Item list:
-Cucumber                2       17.60
-Banana                  1        2.50
-Total: 20.10
+Cucumber                2       18.66
+Banana                  1        2.65
+Total: 21.31
 
 Item added
 Item list:
-Cucumber                3       26.40
-Banana                  1        2.50
-Total: 28.90
+Cucumber                3       27.98
+Banana                  1        2.65
+Total: 30.63
 
 Item added
 Item list:
-Cucumber                3       26.40
-Banana                  1        2.50
-Hamburger 4p            1       67.90
-Total: 96.80
+Cucumber                3       27.98
+Banana                  1        2.65
+Hamburger 4p            1       71.97
+Total: 102.61
 
 Ending sale with the following items:
-Cucumber                3       26.40
-Banana                  1        2.50
-Hamburger 4p            1       67.90
-Price: 96.80
-VAT: 5.81
+Cucumber                3       27.98
+Banana                  1        2.65
+Hamburger 4p            1       71.97
 Total: 102.61
+VAT: 5.81
 Amount to pay: 103
 
 Registering payment...
 ------------------------"Dummy printer"------------------------
 Receipt
-2023-01-09 20:12:58
+2023-01-10 12:16:41
 
 Item                  Qty       Price
-Cucumber                3       26.40
-Banana                  1        2.50
-Hamburger 4p            1       67.90
+Cucumber                3       27.98
+Banana                  1        2.65
+Hamburger 4p            1       71.97
 
-Total price: 96.80
+Total price: 102.61
 VAT: 5.81
 Amount to pay: 103
 

@@ -5,7 +5,6 @@ import java.time.LocalDateTime;
 public class SaleDTO {
     private String itemList;
     private LocalDateTime dateAndTime;
-    private double price;
     private double vatAmount;
     private double totalPrice;
     private int amountToPay;
@@ -22,10 +21,10 @@ public class SaleDTO {
      * @param amountPaid How much the customer paid.
      * @param changeAmount How much change the customer got/will get.
      */
-    public SaleDTO(String itemList, LocalDateTime dateAndTime, double price, double vatAmount, double totalPrice, int amountToPay, int amountPaid, int changeAmount) {
+    public SaleDTO(String itemList, LocalDateTime dateAndTime, double vatAmount, double totalPrice,
+                    int amountToPay, int amountPaid, int changeAmount) {
         this.itemList = itemList;
         this.dateAndTime = dateAndTime;
-        this.price = price;
         this.vatAmount = vatAmount;
         this.totalPrice = totalPrice;
         this.amountToPay = amountToPay;
@@ -53,9 +52,9 @@ public class SaleDTO {
      * Returns the price (excluding VAT) of the sale.
      * @return Price of sale excluding VAT.
      */
-    public double getPrice() {
-        return this.price;
-    }
+    //public double getPrice() {
+    //    return this.price;
+    //}
 
     /**
      * Returns VAT amount of sale.

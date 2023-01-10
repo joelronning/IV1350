@@ -20,7 +20,7 @@ public class Receipt {
     public Receipt(SaleDTO saleInformation) {
         this.dateAndTime = saleInformation.getDateAndTime();
         this.items = saleInformation.getItemList();
-        this.totalPrice = saleInformation.getPrice();
+        this.totalPrice = saleInformation.getTotalPrice();
         this.vatAmount = saleInformation.getVatAmount();
         this.amountToPay = saleInformation.getAmountToPay();
         this.amountPaid = saleInformation.getAmountPaid();
