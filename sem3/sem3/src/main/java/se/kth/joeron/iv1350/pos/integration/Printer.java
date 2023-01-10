@@ -17,9 +17,7 @@ public class Printer {
     public void printReceipt(Receipt currentReceipt) {
         String printOut = this.formatReceipt(currentReceipt);
 
-        System.out.println("------------------------\"Dummy printer\"------------------------");
-        System.out.print(printOut);
-        System.out.println("----------------------End \"dummy\" printer----------------------\n");
+        this.dummyPrinter(printOut);
     }
 
     private String formatReceipt(Receipt receipt) {
@@ -55,7 +53,14 @@ public class Printer {
     private void addNewline(StringBuilder sb) {
         sb.append(String.format("%n"));        
     }
+
     private void newSection(StringBuilder sb) {
         sb.append(String.format("%n%n"));        
+    }
+
+    private void dummyPrinter(String printOut) {
+        System.out.println("------------------------\"Dummy printer\"------------------------");
+        System.out.print(printOut);
+        System.out.println("----------------------End \"dummy\" printer----------------------\n");
     }
 }

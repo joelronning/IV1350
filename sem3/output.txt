@@ -1,0 +1,67 @@
+Point of Sale program running...
+New sale started!
+
+Item added
+Item list:
+Cucumber                1        8.80
+Total: 8.80
+
+Item added
+Item list:
+Cucumber                1        8.80
+Banana                  1        2.50
+Total: 11.30
+
+Item added
+Item list:
+Cucumber                2       17.60
+Banana                  1        2.50
+Total: 20.10
+
+Item added
+Item list:
+Cucumber                3       26.40
+Banana                  1        2.50
+Total: 28.90
+
+Item added
+Item list:
+Cucumber                3       26.40
+Banana                  1        2.50
+Hamburger 4p            1       67.90
+Total: 96.80
+
+Ending sale with the following items:
+Cucumber                3       26.40
+Banana                  1        2.50
+Hamburger 4p            1       67.90
+Price: 96.80
+VAT: 5.81
+Total: 102.61
+Amount to pay: 103
+
+Registering payment...
+------------------------"Dummy printer"------------------------
+Receipt
+2023-01-09 20:12:58
+
+Item                  Qty       Price
+Cucumber                3       26.40
+Banana                  1        2.50
+Hamburger 4p            1       67.90
+
+Total price: 96.80
+VAT: 5.81
+Amount to pay: 103
+
+Payment: 150
+Change: 47
+----------------------End "dummy" printer----------------------
+
+Sale logged
+Inventory updated
+Accounting system updated
+
+Done!
+Change: 47
+
