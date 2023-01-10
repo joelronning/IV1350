@@ -12,16 +12,9 @@ public final class Main {
      */
     public static void main(String[] args) {
         System.out.println("Point of Sale program running...");
-        // Create ioController
         IOController ioController = new IOController();
-        
-        // Create dbController
         DBController externalSystems = new DBController();
-
-        // Create controller
         Controller controller = new Controller(externalSystems, ioController);
-
-        // Create view
         View view = new View(controller);
 
         view.startNewSaleDummy();
