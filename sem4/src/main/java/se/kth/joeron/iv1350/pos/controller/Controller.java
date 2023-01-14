@@ -4,6 +4,7 @@ import se.kth.joeron.iv1350.pos.integration.IOController;
 import se.kth.joeron.iv1350.pos.integration.DBController;
 import se.kth.joeron.iv1350.pos.dto.ItemDTO;
 import se.kth.joeron.iv1350.pos.dto.SaleDTO;
+import se.kth.joeron.iv1350.pos.exception.ItemNotFoundException;
 import se.kth.joeron.iv1350.pos.model.CashRegister;
 import se.kth.joeron.iv1350.pos.model.Receipt;
 import se.kth.joeron.iv1350.pos.model.Sale;
@@ -44,7 +45,7 @@ public class Controller {
      * @param itemID The ID-number of item to register.
      * @return DTO with current state of <code>Sale</code> instance.
      */
-    public SaleDTO registerItem(int itemID) {
+    public SaleDTO registerItem(int itemID) throws ItemNotFoundException {
         ItemDTO itemInformation = externalSystems.requestItemInfo(itemID);
         return this.currentSale.registerItem(itemInformation);
     }

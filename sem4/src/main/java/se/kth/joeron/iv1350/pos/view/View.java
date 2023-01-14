@@ -2,9 +2,11 @@ package se.kth.joeron.iv1350.pos.view;
 
 import se.kth.joeron.iv1350.pos.controller.Controller;
 import se.kth.joeron.iv1350.pos.dto.SaleDTO;
+import se.kth.joeron.iv1350.pos.exception.ItemNotFoundException;
 
 public class View {
     Controller controller;
+    ErrorMessageHandler errMsgHandler;
 
     /**
      * Creates a new instance.
@@ -13,6 +15,7 @@ public class View {
      */
     public View(Controller controller) {
         this.controller = controller;
+        errMsgHandler = new ErrorMessageHandler();
     }
 
     /**
@@ -32,12 +35,18 @@ public class View {
      * "Dummy" view. Use this to test the registerItem scenario.
      */
     public void registerItemDummy(int id) {
-        SaleDTO saleInformation = controller.registerItem(id);
-        System.out.println("Item added");
-        System.out.println("Item list:");
-        System.out.println(saleInformation.getItemList().toString());
-        System.out.printf("Total: %.2f%n", (saleInformation.getTotalPrice()));
-        System.out.println();
+        try {
+            SaleDTO saleInformation = controller.registerItem(id);
+            System.out.println("Item added");
+            System.out.println("Item list:");
+            System.out.println(saleInformation.getItemList().toString());
+            System.out.printf("Total: %.2f%n", (saleInformation.getTotalPrice()));
+            System.out.println();
+        }
+        catch (ItemNotFoundException exception) {
+            String errorMessage = "No item with ID number: " + exception.getItemID();
+            errMsgHandler.displayErrorMessage(errorMessage);
+        }
     }
 
     /**

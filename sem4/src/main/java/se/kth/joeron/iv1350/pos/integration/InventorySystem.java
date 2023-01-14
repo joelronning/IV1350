@@ -2,6 +2,7 @@ package se.kth.joeron.iv1350.pos.integration;
 
 import se.kth.joeron.iv1350.pos.dto.SaleDTO;
 import se.kth.joeron.iv1350.pos.dto.ItemDTO;
+import se.kth.joeron.iv1350.pos.exception.ItemNotFoundException;
 
 public class InventorySystem {
     ItemDTO[] dummyDatabase = {new ItemDTO(1, "Banana", "Origin: Colombia", 2.50, 1, 0.06),
@@ -20,9 +21,9 @@ public class InventorySystem {
      * @param itemID Item identifer number.
      * @return <code>ItemDTO</code> containing information about the specified item.
      */
-    public ItemDTO requestItemInfo(int itemID) {
+    public ItemDTO requestItemInfo(int itemID) throws ItemNotFoundException {
         if (itemID > this.dummyDatabase.length || itemID < 1)
-            return new ItemDTO();
+            throw new ItemNotFoundException(itemID);
 
         return this.dummyDatabase[itemID - 1];
     }

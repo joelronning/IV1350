@@ -1,6 +1,7 @@
 package se.kth.joeron.iv1350.pos.integration;
 
 import se.kth.joeron.iv1350.pos.dto.SaleDTO;
+import se.kth.joeron.iv1350.pos.exception.ItemNotFoundException;
 import se.kth.joeron.iv1350.pos.dto.ItemDTO;
 import se.kth.joeron.iv1350.pos.dto.DiscountRulesDTO;
 
@@ -41,8 +42,9 @@ public class DBController {
      * Retrieves information about a specified item from the inventory.
      * @param itemID Item identifer number.
      * @return <code>ItemDTO</code>
+     * @throws ItemNotFoundException
      */
-    public ItemDTO requestItemInfo(int itemID) {
+    public ItemDTO requestItemInfo(int itemID) throws ItemNotFoundException {
         return this.inventorySystem.requestItemInfo(itemID);
     }
 }
