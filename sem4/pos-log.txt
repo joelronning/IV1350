@@ -1,0 +1,77 @@
+Jan 16, 2023, 7:06:04 PM, Exception thrown: Failed to register item, see stack trace below:
+se.kth.joeron.iv1350.pos.exception.OperationFailedException: Failed to register item, see stack trace below:
+	at se.kth.joeron.iv1350.pos.controller.Controller.registerItem(Controller.java:56)
+	at se.kth.joeron.iv1350.pos.view.View.registerItemDummy(View.java:50)
+	at se.kth.joeron.iv1350.pos.startup.Main.testRun(Main.java:30)
+	at se.kth.joeron.iv1350.pos.startup.Main.main(Main.java:20)
+Caused by: se.kth.joeron.iv1350.pos.exception.InventorySystemException: Simulated database error
+	at se.kth.joeron.iv1350.pos.integration.InventorySystem.requestItemInfo(InventorySystem.java:31)
+	at se.kth.joeron.iv1350.pos.integration.DBController.requestItemInfo(DBController.java:49)
+	at se.kth.joeron.iv1350.pos.controller.Controller.registerItem(Controller.java:52)
+	... 3 more
+Jan 16, 2023, 7:08:30 PM, Exception thrown: Failed to register item, see stack trace below:
+se.kth.joeron.iv1350.pos.exception.OperationFailedException: Failed to register item, see stack trace below:
+	at se.kth.joeron.iv1350.pos.controller.Controller.registerItem(Controller.java:56)
+	at se.kth.joeron.iv1350.pos.view.View.registerItemDummy(View.java:50)
+	at se.kth.joeron.iv1350.pos.startup.Main.testRun(Main.java:30)
+	at se.kth.joeron.iv1350.pos.startup.Main.main(Main.java:20)
+Caused by: se.kth.joeron.iv1350.pos.exception.InventorySystemException: Simulated database error
+	at se.kth.joeron.iv1350.pos.integration.InventorySystem.requestItemInfo(InventorySystem.java:31)
+	at se.kth.joeron.iv1350.pos.integration.DBController.requestItemInfo(DBController.java:49)
+	at se.kth.joeron.iv1350.pos.controller.Controller.registerItem(Controller.java:52)
+	... 3 more
+Jan 17, 2023, 11:17:13 AM, Exception thrown: Failed to register item, see stack trace below:
+se.kth.joeron.iv1350.pos.exception.OperationFailedException: Failed to register item, see stack trace below:
+	at se.kth.joeron.iv1350.pos.controller.Controller.registerItem(Controller.java:63)
+	at se.kth.joeron.iv1350.pos.view.View.registerItemDummy(View.java:53)
+	at se.kth.joeron.iv1350.pos.startup.Main.testRun(Main.java:33)
+	at se.kth.joeron.iv1350.pos.startup.Main.main(Main.java:23)
+Caused by: se.kth.joeron.iv1350.pos.exception.InventorySystemException: Simulated database error
+	at se.kth.joeron.iv1350.pos.integration.InventorySystem.requestItemInfo(InventorySystem.java:34)
+	at se.kth.joeron.iv1350.pos.integration.DBController.requestItemInfo(DBController.java:53)
+	at se.kth.joeron.iv1350.pos.controller.Controller.registerItem(Controller.java:59)
+	... 3 more
+Jan 17, 2023, 11:21:54 AM, Exception thrown: Failed to register item, see stack trace below:
+se.kth.joeron.iv1350.pos.exception.OperationFailedException: Failed to register item, see stack trace below:
+	at se.kth.joeron.iv1350.pos.controller.Controller.registerItem(Controller.java:63)
+	at se.kth.joeron.iv1350.pos.view.View.registerItemDummy(View.java:64)
+	at se.kth.joeron.iv1350.pos.startup.Main.testRun(Main.java:33)
+	at se.kth.joeron.iv1350.pos.startup.Main.main(Main.java:23)
+Caused by: se.kth.joeron.iv1350.pos.exception.InventorySystemException: Simulated database error
+	at se.kth.joeron.iv1350.pos.integration.InventorySystem.requestItemInfo(InventorySystem.java:34)
+	at se.kth.joeron.iv1350.pos.integration.DBController.requestItemInfo(DBController.java:53)
+	at se.kth.joeron.iv1350.pos.controller.Controller.registerItem(Controller.java:59)
+	... 3 more
+Jan 17, 2023, 11:23:27 AM, Exception thrown: Failed to register item, see stack trace below:
+se.kth.joeron.iv1350.pos.exception.OperationFailedException: Failed to register item, see stack trace below:
+	at se.kth.joeron.iv1350.pos.controller.Controller.registerItem(Controller.java:63)
+	at se.kth.joeron.iv1350.pos.view.View.registerItemDummy(View.java:64)
+	at se.kth.joeron.iv1350.pos.startup.Main.testRun(Main.java:33)
+	at se.kth.joeron.iv1350.pos.startup.Main.main(Main.java:23)
+Caused by: se.kth.joeron.iv1350.pos.exception.InventorySystemException: Simulated database error
+	at se.kth.joeron.iv1350.pos.integration.InventorySystem.requestItemInfo(InventorySystem.java:34)
+	at se.kth.joeron.iv1350.pos.integration.DBController.requestItemInfo(DBController.java:53)
+	at se.kth.joeron.iv1350.pos.controller.Controller.registerItem(Controller.java:59)
+	... 3 more
+Jan 17, 2023, 11:23:42 AM, Exception thrown: Failed to register item, see stack trace below:
+se.kth.joeron.iv1350.pos.exception.OperationFailedException: Failed to register item, see stack trace below:
+	at se.kth.joeron.iv1350.pos.controller.Controller.registerItem(Controller.java:63)
+	at se.kth.joeron.iv1350.pos.view.View.registerItemDummy(View.java:64)
+	at se.kth.joeron.iv1350.pos.startup.Main.testRun(Main.java:33)
+	at se.kth.joeron.iv1350.pos.startup.Main.main(Main.java:23)
+Caused by: se.kth.joeron.iv1350.pos.exception.InventorySystemException: Simulated database error
+	at se.kth.joeron.iv1350.pos.integration.InventorySystem.requestItemInfo(InventorySystem.java:34)
+	at se.kth.joeron.iv1350.pos.integration.DBController.requestItemInfo(DBController.java:53)
+	at se.kth.joeron.iv1350.pos.controller.Controller.registerItem(Controller.java:59)
+	... 3 more
+Jan 17, 2023, 11:26:32 AM, Exception thrown: Failed to register item, see stack trace below:
+se.kth.joeron.iv1350.pos.exception.OperationFailedException: Failed to register item, see stack trace below:
+	at se.kth.joeron.iv1350.pos.controller.Controller.registerItem(Controller.java:63)
+	at se.kth.joeron.iv1350.pos.view.View.registerItemDummy(View.java:65)
+	at se.kth.joeron.iv1350.pos.startup.Main.testRun(Main.java:33)
+	at se.kth.joeron.iv1350.pos.startup.Main.main(Main.java:23)
+Caused by: se.kth.joeron.iv1350.pos.exception.InventorySystemException: Simulated database error
+	at se.kth.joeron.iv1350.pos.integration.InventorySystem.requestItemInfo(InventorySystem.java:34)
+	at se.kth.joeron.iv1350.pos.integration.DBController.requestItemInfo(DBController.java:53)
+	at se.kth.joeron.iv1350.pos.controller.Controller.registerItem(Controller.java:59)
+	... 3 more

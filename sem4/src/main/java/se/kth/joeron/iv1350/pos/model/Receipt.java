@@ -4,6 +4,9 @@ import java.time.LocalDateTime;
 
 import se.kth.joeron.iv1350.pos.dto.SaleDTO;
 
+/**
+ * This class represents a receipt and is used by the external printer system.
+ */
 public class Receipt {
     private LocalDateTime dateAndTime;
     private String items;

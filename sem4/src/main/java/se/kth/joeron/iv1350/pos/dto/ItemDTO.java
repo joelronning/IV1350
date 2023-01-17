@@ -1,5 +1,9 @@
 package se.kth.joeron.iv1350.pos.dto;
 
+/**
+ * This class is used to convey information about an item between different parts
+ * of the program.
+ */
 public class ItemDTO {
     private int id;
     private String name;

@@ -7,6 +7,10 @@ package se.kth.joeron.iv1350.pos.exception;
 public class ItemNotFoundException extends Exception {
     int itemID;
     
+    /**
+     * Creates an instance of the exception.
+     * @param itemIDNumber The ID number that did not correspond to an item.
+     */
     public ItemNotFoundException (int itemIDNumber) {
         super("Could not find item with number " + itemIDNumber);
         itemID = itemIDNumber;

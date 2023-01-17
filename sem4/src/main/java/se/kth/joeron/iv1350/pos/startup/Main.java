@@ -5,6 +5,9 @@ import se.kth.joeron.iv1350.pos.integration.IOController;
 import se.kth.joeron.iv1350.pos.integration.DBController;
 import se.kth.joeron.iv1350.pos.view.View;
 
+/**
+ * This class is responsible for starting up the components of the POS program.
+ */
 public final class Main {
     /**
      * Creates the program components and runs the program.
@@ -25,9 +28,12 @@ public final class Main {
         view.registerItemDummy(3);
         view.registerItemDummy(1);
         view.registerItemDummy(3);
+        view.registerItemDummy(404);
         view.registerItemDummy(3);
+        view.registerItemDummy(66);
         view.registerItemDummy(4);
         view.endSaleDummy();
         view.registerPaymentDummy(150);
+        view.cleanUp();
     }
 }

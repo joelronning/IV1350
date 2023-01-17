@@ -2,6 +2,9 @@ package se.kth.joeron.iv1350.pos.model;
 
 import se.kth.joeron.iv1350.pos.dto.ItemDTO;
 
+/**
+ * This class represents an item type to be sold.
+ */
 public class Item {
     private String name;
     private int id;

@@ -2,6 +2,10 @@ package se.kth.joeron.iv1350.pos.dto;
 
 import java.time.LocalDateTime;
 
+/**
+ * This class carries information about a sale between different parts
+ * of the program.
+ */
 public class SaleDTO {
     private String itemList;
     private LocalDateTime dateAndTime;

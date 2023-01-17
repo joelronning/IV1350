@@ -3,6 +3,10 @@ package se.kth.joeron.iv1350.pos.integration;
 import se.kth.joeron.iv1350.pos.dto.SaleDTO;
 import se.kth.joeron.iv1350.pos.dto.DiscountRulesDTO;
 
+/**
+ * This class is responsible for communicating with the external discount
+ * database (which is currently not implemented).
+ */
 public class DiscountDatabase {
     /**
      * Creates a new instance.

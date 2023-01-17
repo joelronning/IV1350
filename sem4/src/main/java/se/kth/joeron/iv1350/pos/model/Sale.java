@@ -3,14 +3,16 @@ package se.kth.joeron.iv1350.pos.model;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import se.kth.joeron.iv1350.pos.dto.DiscountRulesDTO;
 import se.kth.joeron.iv1350.pos.dto.ItemDTO;
 import se.kth.joeron.iv1350.pos.dto.SaleDTO;
 
+/**
+ * This class respresents a sale and holds information about for example sold
+ * items and total price.
+ */
 public class Sale {
     private LocalDateTime dateAndTime;
     private List<Item> items;
-    private double price;
     private double vatAmount;
     private double totalPrice;
     private int amountPaid;
@@ -18,7 +20,7 @@ public class Sale {
 
     public Sale() {
         this.items = new ArrayList<Item>();
-        this.price = 0;
+        this.totalPrice = 0;
     }
 
     /**
@@ -94,7 +96,6 @@ public class Sale {
             sumVAT += item.getVATAmount();
         }
         
-        this.price = sumPrice;
         this.vatAmount = sumVAT;
         this.totalPrice = sumPrice + sumVAT;
     }

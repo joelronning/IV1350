@@ -1,12 +1,21 @@
 package se.kth.joeron.iv1350.pos.view;
 
+import java.io.IOException;
+
 import se.kth.joeron.iv1350.pos.controller.Controller;
 import se.kth.joeron.iv1350.pos.dto.SaleDTO;
 import se.kth.joeron.iv1350.pos.exception.ItemNotFoundException;
+import se.kth.joeron.iv1350.pos.util.SystemLogHandler;
+import se.kth.joeron.iv1350.pos.util.TotalRevenueFileOutput;
 
+/**
+ * This class is a dummy replacement of a user interface for the POS program.
+ */
 public class View {
-    Controller controller;
-    ErrorMessageHandler errMsgHandler;
+    private Controller controller;
+    private ErrorMessageHandler errMsgHandler;
+    private SystemLogHandler sysLogHandler;
+    private TotalRevenueFileOutput fileOutputObserver;
 
     /**
      * Creates a new instance.
@@ -15,7 +24,24 @@ public class View {
      */
     public View(Controller controller) {
         this.controller = controller;
+        this.controller.addObserver(new TotalRevenueView());
         errMsgHandler = new ErrorMessageHandler();
+
+        try {
+            fileOutputObserver = new TotalRevenueFileOutput();
+            this.controller.addObserver(fileOutputObserver);
+        }
+        catch (IOException ioe) {
+            errMsgHandler.displayErrorMessage("Failed to open file to save total revenue.");
+        }
+
+        try {
+            sysLogHandler = new SystemLogHandler();
+        }
+        catch (IOException ioe) {
+            errMsgHandler.displayErrorMessage("Failed to open log file. Please contact the " +
+                                            "system administrator if this problem persists.");
+        }
     }
 
     /**
@@ -41,12 +67,17 @@ public class View {
             System.out.println("Item list:");
             System.out.println(saleInformation.getItemList().toString());
             System.out.printf("Total: %.2f%n", (saleInformation.getTotalPrice()));
-            System.out.println();
         }
-        catch (ItemNotFoundException exception) {
-            String errorMessage = "No item with ID number: " + exception.getItemID();
+        catch (ItemNotFoundException infe) {
+            String errorMessage = "Could not find item with ID number: " + infe.getItemID() +
+                                    "\nNo item registered, please check ID and try again!";
             errMsgHandler.displayErrorMessage(errorMessage);
         }
+        catch (Exception exception) {
+            String errorMessage = "There was an error when registering the last item, please try again!";
+            writeToLogAndUI(errorMessage, exception);
+        }
+        System.out.println();
     }
 
     /**
@@ -62,6 +93,10 @@ public class View {
         System.out.println();
     }
 
+    /**
+     * "Dummy" interaction to test registering payment and completing sale.
+     * @param amountPaid The amount paid by the customer.
+     */
     public void registerPaymentDummy(int amountPaid) {
         System.out.println("Registering payment...");
         int changeAmount = controller.registerPayment(amountPaid);
@@ -69,5 +104,19 @@ public class View {
         System.out.println("\nDone!");
         System.out.println("Change: " + changeAmount);
         System.out.println();
+    }
+
+    /**
+     * Closes the log file. This should be always be done before exiting program to prevent
+     * file corruption.
+     */
+    public void cleanUp() {
+        sysLogHandler.closeLogFile();
+        fileOutputObserver.closeOutputFile();
+    }
+
+    private void writeToLogAndUI (String uiMessage, Exception exception) {
+        errMsgHandler.displayErrorMessage(uiMessage);
+        sysLogHandler.logException(exception);
     }
 }

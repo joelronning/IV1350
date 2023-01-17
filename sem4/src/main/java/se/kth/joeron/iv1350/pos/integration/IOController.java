@@ -3,6 +3,9 @@ package se.kth.joeron.iv1350.pos.integration;
 import se.kth.joeron.iv1350.pos.dto.SaleDTO;
 import se.kth.joeron.iv1350.pos.model.Receipt;
 
+/**
+ * This class is responsible for all classes communicating with external IO-systems.
+ */
 public class IOController {
     Printer printer;
     SaleLog saleLog;

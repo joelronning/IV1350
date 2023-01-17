@@ -2,18 +2,27 @@ package se.kth.joeron.iv1350.pos.controller;
 
 import se.kth.joeron.iv1350.pos.integration.IOController;
 import se.kth.joeron.iv1350.pos.integration.DBController;
+
+import java.util.ArrayList;
+
 import se.kth.joeron.iv1350.pos.dto.ItemDTO;
 import se.kth.joeron.iv1350.pos.dto.SaleDTO;
+import se.kth.joeron.iv1350.pos.exception.InventorySystemException;
 import se.kth.joeron.iv1350.pos.exception.ItemNotFoundException;
+import se.kth.joeron.iv1350.pos.exception.OperationFailedException;
 import se.kth.joeron.iv1350.pos.model.CashRegister;
 import se.kth.joeron.iv1350.pos.model.Receipt;
 import se.kth.joeron.iv1350.pos.model.Sale;
+import se.kth.joeron.iv1350.pos.model.TotalRevenueObserver;
 
+/**
+ * This class is responsible for connecting the different parts of the program together.
+ */
 public class Controller {
-    DBController externalSystems;
-    IOController ioController;
-    CashRegister cashRegister;
-    Sale currentSale;
+    private DBController externalSystems;
+    private IOController ioController;
+    private CashRegister cashRegister;
+    private Sale currentSale;
     
     /**
      * Creates a new instance.
@@ -45,9 +54,14 @@ public class Controller {
      * @param itemID The ID-number of item to register.
      * @return DTO with current state of <code>Sale</code> instance.
      */
-    public SaleDTO registerItem(int itemID) throws ItemNotFoundException {
-        ItemDTO itemInformation = externalSystems.requestItemInfo(itemID);
-        return this.currentSale.registerItem(itemInformation);
+    public SaleDTO registerItem(int itemID) throws ItemNotFoundException, OperationFailedException {
+        try {
+            ItemDTO itemInformation = externalSystems.requestItemInfo(itemID);
+            return this.currentSale.registerItem(itemInformation);
+        }
+        catch (InventorySystemException ise) {
+            throw new OperationFailedException("Failed to register item, see stack trace below:", ise);
+        }
     }
 
     //public SaleDTO enterQuantity(int quantity) {
@@ -81,5 +95,15 @@ public class Controller {
         this.cashRegister.addPayment(saleInformation.getAmountToPay());
 
         return saleInformation.getChangeAmount();
+    }
+
+    /**
+     * Adds given observer to the cash register. No need to keep a
+     * list of observers in the controller since <code>cashRegister</code>
+     * is instantiated in the constructor of this (<code>Controller</code>) class.
+     * @param obs The observer to be added.
+     */
+    public void addObserver(TotalRevenueObserver obs) {
+        this.cashRegister.addObserver(obs);
     }
 }

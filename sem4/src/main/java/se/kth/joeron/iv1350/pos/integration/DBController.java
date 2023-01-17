@@ -1,10 +1,15 @@
 package se.kth.joeron.iv1350.pos.integration;
 
 import se.kth.joeron.iv1350.pos.dto.SaleDTO;
+import se.kth.joeron.iv1350.pos.exception.InventorySystemException;
 import se.kth.joeron.iv1350.pos.exception.ItemNotFoundException;
 import se.kth.joeron.iv1350.pos.dto.ItemDTO;
 import se.kth.joeron.iv1350.pos.dto.DiscountRulesDTO;
 
+/**
+ * This class is responsible for all classes communicating with external
+ * databases.
+ */
 public class DBController {
     AccountingSystem accountingSystem;
     DiscountDatabase discountDB;
@@ -44,7 +49,7 @@ public class DBController {
      * @return <code>ItemDTO</code>
      * @throws ItemNotFoundException
      */
-    public ItemDTO requestItemInfo(int itemID) throws ItemNotFoundException {
+    public ItemDTO requestItemInfo(int itemID) throws ItemNotFoundException, InventorySystemException {
         return this.inventorySystem.requestItemInfo(itemID);
     }
 }

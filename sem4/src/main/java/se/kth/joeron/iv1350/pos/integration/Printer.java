@@ -4,6 +4,10 @@ import java.time.format.DateTimeFormatter;
 
 import se.kth.joeron.iv1350.pos.model.Receipt;
 
+/**
+ * This class is responsible for communicating with the external receipt
+ * printer. The printer is currently a dummy printer, writing to System.out.
+ */
 public class Printer {
     /**
      * Creates a new instance.
