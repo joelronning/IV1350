@@ -49,7 +49,7 @@ public class DBController {
      * @return <code>ItemDTO</code>
      * @throws ItemNotFoundException
      */
-    public ItemDTO requestItemInfo(int itemID) throws ItemNotFoundException, InventorySystemException {
+    public ItemDTO requestItemInfo(int itemID) throws ItemNotFoundException {
         return this.inventorySystem.requestItemInfo(itemID);
     }
 }

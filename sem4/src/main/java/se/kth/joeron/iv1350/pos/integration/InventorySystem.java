@@ -29,7 +29,7 @@ public class InventorySystem {
      * @param itemID Item identifer number.
      * @return <code>ItemDTO</code> containing information about the specified item.
      */
-    public ItemDTO requestItemInfo(int itemID) throws ItemNotFoundException, InventorySystemException {
+    public ItemDTO requestItemInfo(int itemID) throws ItemNotFoundException {
         if (itemID == 66)
             throw new InventorySystemException("Simulated database error");
         else if (itemID > this.dummyDatabase.length || itemID < 1)
