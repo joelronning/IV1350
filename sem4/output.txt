@@ -1,0 +1,74 @@
+Point of Sale program running...
+New sale started!
+
+Item added
+Item list:
+Cucumber                1        9.33
+Total: 9.33
+
+Item added
+Item list:
+Cucumber                1        9.33
+Banana                  1        2.65
+Total: 11.98
+
+Item added
+Item list:
+Cucumber                2       18.66
+Banana                  1        2.65
+Total: 21.31
+
+ERROR: Could not find item with ID number: 404
+No item registered, please check ID and try again!
+
+Item added
+Item list:
+Cucumber                3       27.98
+Banana                  1        2.65
+Total: 30.63
+
+ERROR: There was an error when registering the last item, please try again!
+
+Item added
+Item list:
+Cucumber                3       27.98
+Banana                  1        2.65
+Hamburger 4p            1       71.97
+Total: 102.61
+
+Ending sale with the following items:
+Cucumber                3       27.98
+Banana                  1        2.65
+Hamburger 4p            1       71.97
+Total: 102.61
+VAT: 5.81
+Amount to pay: 103
+
+Registering payment...
+------------------------"Dummy printer"------------------------
+Receipt
+2023-02-05 18:05:54
+
+Item                  Qty       Price
+Cucumber                3       27.98
+Banana                  1        2.65
+Hamburger 4p            1       71.97
+
+Total price: 102.61
+VAT: 5.81
+Amount to pay: 103
+
+Payment: 150
+Change: 47
+----------------------End "dummy" printer----------------------
+
+Sale logged
+Inventory updated
+Accounting system updated
+-----------TotalRevenueView-----------
+Total revenue: 103
+-----------TotalRevenueView-----------
+
+Done!
+Change: 47
+
